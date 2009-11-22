@@ -49,6 +49,11 @@
       <Project>{433cc4ec-3847-4c38-b9d1-e972270e740b}</Project>
       <Private>True</Private>
     </ProjectReference>
+    <ProjectReference Include="..\RailServiceFacade\RailServiceFacade.csproj">
+      <Name>RailServiceFacade</Name>
+      <Project>{ea1e1294-0eee-47e1-9a4a-8e4488218c1f}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

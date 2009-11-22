@@ -5,6 +5,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "LondonTransportStatus", "Lo
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Console", "Console\Console.fsproj", "{D1A72552-9AA4-41CF-B824-8248BB9F2AF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailServiceFacade", "RailServiceFacade\RailServiceFacade.csproj", "{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{D1A72552-9AA4-41CF-B824-8248BB9F2AF5}.Release|Mixed Platforms.Build.0 = Release|x86
 		{D1A72552-9AA4-41CF-B824-8248BB9F2AF5}.Release|x86.ActiveCfg = Release|x86
 		{D1A72552-9AA4-41CF-B824-8248BB9F2AF5}.Release|x86.Build.0 = Release|x86
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
