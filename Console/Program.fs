@@ -2,8 +2,9 @@
 
 open LondonTransportStatus
 
-let tubefeed = "http://api.tubeupdates.com/?method=get.status&lines=tube&format=xml"
 let lines = "northern"
+
+let tubefeed = "http://api.tubeupdates.com/?method=get.status&lines=" + lines + "&format=xml"
 
 let numRows:uint16 = uint16 5
 let stationCode = "KTN"
@@ -17,6 +18,13 @@ for status in tubeStatus do
     Console.WriteLine(status.ToString())
 
 let rs = new RailStatus()
-let status = rs.Status(numRows, stationCode, filterStationCode, timeOffset)
+let railStatus = rs.Status(numRows, stationCode, filterStationCode, timeOffset)
+
+for service in railStatus.trainServices do
+    Console.WriteLine(service.operator)
+    let serviceLocation = service.destination.[service.destination.Length-1]
+    Console.WriteLine(serviceLocation.locationName)
+    Console.WriteLine(service.std + " (" + service.etd + ")")
+    Console.WriteLine()
 
 let quit = Console.ReadKey()
