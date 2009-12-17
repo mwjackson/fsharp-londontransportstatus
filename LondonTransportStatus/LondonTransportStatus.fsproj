@@ -30,6 +30,10 @@
     <WarningLevel>3</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>D:\Projects\LondonTransportStatus\LondonTransportStatus\bin\Debug\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core" />
     <Reference Include="System" />
@@ -42,6 +46,7 @@
     <Compile Include="LineStatus.fs" />
     <Compile Include="TubeStatus.fs" />
     <Compile Include="RailStatus.fs" />
+    <Compile Include="BusStatus.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RailServiceFacade\RailServiceFacade.csproj">

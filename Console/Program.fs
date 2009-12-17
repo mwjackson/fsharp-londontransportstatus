@@ -2,14 +2,16 @@
 
 open LondonTransportStatus
 
-let lines = "northern"
-
+let lines = "northern, bakerloo, victoria"
 let tubefeed = "http://api.tubeupdates.com/?method=get.status&lines=" + lines + "&format=xml"
 
 let numRows:uint16 = uint16 5
 let stationCode = "KTN"
 let filterStationCode = "ZFD"
 let timeOffset = 0
+
+let busRoutes = "C2"
+let busFeed = "http://www.tfl.gov.uk/tfl/livetravelnews/realtime/information.asp?line=" + busRoutes + "&Submit=Search&time=now&mode=buses"
 
 let ts = new TubeStatus(tubefeed)
 let tubeStatus = ts.Status(lines)
@@ -26,5 +28,9 @@ for service in railStatus.trainServices do
     Console.WriteLine(serviceLocation.locationName)
     Console.WriteLine(service.std + " (" + service.etd + ")")
     Console.WriteLine()
+
+let bs = new BusStatus(busFeed)
+let busStatus = bs.Status(busRoutes)
+Console.WriteLine(busStatus)
 
 let quit = Console.ReadKey()
