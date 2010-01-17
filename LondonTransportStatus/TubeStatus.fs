@@ -5,7 +5,10 @@ open System.Net
 open System.IO
 open System.Xml
 
-type TubeStatus(url:string) =
+type TubeStatus(lines) =
+    
+    let lines = lines
+    let tubefeed = "http://api.tubeupdates.com/?method=get.status&lines=<lines>&format=xml"
 
     let CreateLineStatus(node:XmlNode) =
         let name = node.SelectSingleNode("name").InnerText
@@ -22,8 +25,9 @@ type TubeStatus(url:string) =
         let lineStatus = new LineStatus(name, status, messages, statustime)
         lineStatus
 
-    let GetStatus(lines:string) = 
-        let request = HttpWebRequest.Create(url)
+    let GetStatus() = 
+        let linesString = lines |> Seq.fold (fun lines delim -> lines + delim) ","
+        let request = HttpWebRequest.Create(tubefeed.Replace("<lines>", linesString))
         let response = request.GetResponse()
         let responseStream = response.GetResponseStream()
         let reader = new StreamReader(responseStream)
@@ -40,4 +44,9 @@ type TubeStatus(url:string) =
             ]
         xmlStatuses
  
-    member x.Status(lines:string) = GetStatus(lines)
+    member x.Lines() = lines
+    member x.Status() = 
+        match lines with
+        | [] -> []
+        | [""] -> []
+        | _ -> GetStatus()

@@ -8,3 +8,5 @@ _Resharper.*
 *.cache
 *~
 *.swp
+.hg
+.hgignore

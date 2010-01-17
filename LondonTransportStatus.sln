@@ -7,6 +7,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Console", "Console\Console.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailServiceFacade", "RailServiceFacade\RailServiceFacade.csproj", "{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "LondonTransportStatusTests", "LondonTransportStatusTests\LondonTransportStatusTests.fsproj", "{63BBE29A-1C3E-491F-A46F-192E92715F1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EA1E1294-0EEE-47E1-9A4A-8E4488218C1F}.Release|x86.ActiveCfg = Release|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{63BBE29A-1C3E-491F-A46F-192E92715F1E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

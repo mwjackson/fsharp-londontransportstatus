@@ -5,12 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{433cc4ec-3847-4c38-b9d1-e972270e740b}</ProjectGuid>
+    <ProjectGuid>{63bbe29a-1c3e-491f-a46f-192e92715f1e}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FSharpSample</RootNamespace>
-    <AssemblyName>LondonTransportStatus</AssemblyName>
+    <RootNamespace>LondonTransportStatusTests</RootNamespace>
+    <AssemblyName>LondonTransportStatusTests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <Name>LondonTransportStatus</Name>
+    <Name>LondonTransportStatusTests</Name>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,28 +31,28 @@
     <WarningLevel>3</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>D:\Projects\LondonTransportStatus\LondonTransportStatus\bin\Debug\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FSharp.Core">
       <Private>True</Private>
     </Reference>
-    <Reference Include="mscorlib" />
-    <Reference Include="FSharp.Core" />
+    <Reference Include="nunit.framework">
+      <HintPath>D:\Projects\LondonTransportStatus\LondonTransportStatusTests\lib\NUnit 2.5.3.9345\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LineStatus.fs" />
-    <Compile Include="TubeStatus.fs" />
-    <Compile Include="RailStatus.fs" />
-    <Compile Include="BusStatus.fs" />
+    <Compile Include="FsUnit.NUnit-0.9.0.fs" />
+    <Compile Include="TubeStatusTests.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RailServiceFacade\RailServiceFacade.csproj">
-      <Name>RailServiceFacade</Name>
-      <Project>{ea1e1294-0eee-47e1-9a4a-8e4488218c1f}</Project>
+    <ProjectReference Include="..\LondonTransportStatus\LondonTransportStatus.fsproj">
+      <Name>LondonTransportStatus</Name>
+      <Project>{433cc4ec-3847-4c38-b9d1-e972270e740b}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
