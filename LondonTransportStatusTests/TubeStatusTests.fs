@@ -1,36 +1,11 @@
 ﻿namespace LondonTransportStatus.Tests
 
+open LondonTransportStatus
+
 open NUnit.Framework
 open Rhino.Mocks
 open System.Xml
 open System
-
-type ITflQuery =
-    abstract member Query : unit -> unit
-
-type TflQuery() =
-    interface ITflQuery with
-        member this.Query() =
-            Console.WriteLine("querying tfl")
-
-type ITubeStatus =
-    abstract member Status : unit -> list<string>
-
-type TubeStatus(tflQuery:ITflQuery, lines) =
-    
-    let _tflQuery = tflQuery
-
-    let _lines = lines
-    member this.Lines = _lines
-
-    interface ITubeStatus with
-        member this.Status() = 
-            match(lines) with
-            | [] | [""] -> []
-            | _ -> 
-                _tflQuery.Query()
-                []
-    end
 
 [<TestFixture>]
 type TubeStatusTests ()=

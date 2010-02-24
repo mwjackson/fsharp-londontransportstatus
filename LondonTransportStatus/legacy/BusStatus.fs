@@ -1,4 +1,4 @@
-﻿namespace LondonTransportStatus
+﻿namespace LondonTransportStatus.Legacy
 
 open System
 open System.Net

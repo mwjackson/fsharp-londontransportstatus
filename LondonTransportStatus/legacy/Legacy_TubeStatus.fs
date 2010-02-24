@@ -1,11 +1,11 @@
-﻿namespace LondonTransportStatus
+﻿namespace LondonTransportStatus.Legacy
 
 open System
 open System.Net
 open System.IO
 open System.Xml
 
-type TubeStatus(lines) =
+type Legacy_TubeStatus(lines) =
     
     let lines = lines
     let tubefeed = "http://api.tubeupdates.com/?method=get.status&lines=<lines>&format=xml"
