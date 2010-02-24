@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LineStatus.fs" />
-    <Compile Include="TubeStatus.fs" />
-    <Compile Include="RailStatus.fs" />
-    <Compile Include="BusStatus.fs" />
+    <Compile Include="Legacy\LineStatus.fs" />
+    <Compile Include="Legacy\TubeStatus.fs" />
+    <Compile Include="Legacy\RailStatus.fs" />
+    <Compile Include="Legacy\BusStatus.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RailServiceFacade\RailServiceFacade.csproj">
@@ -55,6 +55,7 @@
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
+
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 	     Other similar extension points exist, see Microsoft.Common.targets.
