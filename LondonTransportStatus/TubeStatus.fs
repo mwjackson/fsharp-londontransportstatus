@@ -5,9 +5,9 @@ open System
 type ITubeStatus =
     abstract member Status : unit -> list<string>
 
-type TubeStatus(tflQuery:ITflQuery, lines) =
+type TubeStatus(tubeQuery:ITubeUpdatesQuery, lines) =
     
-    let _tflQuery = tflQuery
+    let _tubeQuery = tubeQuery
 
     let _lines = lines
     member this.Lines = _lines
@@ -17,6 +17,6 @@ type TubeStatus(tflQuery:ITflQuery, lines) =
             match(lines) with
             | [] | [""] -> []
             | _ -> 
-                _tflQuery.Query()
+                tubeQuery.Query([]) |> ignore
                 []
     end

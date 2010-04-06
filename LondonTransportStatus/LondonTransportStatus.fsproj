@@ -47,7 +47,8 @@
     <Compile Include="Legacy\Legacy_TubeStatus.fs" />
     <Compile Include="Legacy\RailStatus.fs" />
     <Compile Include="Legacy\BusStatus.fs" />
-    <Compile Include="TflQuery.fs" />
+    <Compile Include="WebRequest.fs" />
+    <Compile Include="TubeUpdatesQuery.fs" />
     <Compile Include="TubeStatus.fs" />
   </ItemGroup>
   <ItemGroup>

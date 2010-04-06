@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="FsUnit.NUnit-0.9.0.fs" />
     <Compile Include="TubeStatusTests.fs" />
+    <Compile Include="TubeUpdatesQueryTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LondonTransportStatus\LondonTransportStatus.fsproj">

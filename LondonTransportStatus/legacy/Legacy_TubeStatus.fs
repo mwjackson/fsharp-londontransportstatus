@@ -26,14 +26,17 @@ type Legacy_TubeStatus(lines) =
         lineStatus
 
     let GetStatus() = 
-        let linesString = lines |> Seq.fold (fun lines delim -> lines + delim) ","
-        let request = HttpWebRequest.Create(tubefeed.Replace("<lines>", linesString))
-        let response = request.GetResponse()
-        let responseStream = response.GetResponseStream()
-        let reader = new StreamReader(responseStream)
-
+        let linesString = lines |> Seq.fold (fun lines line -> lines + line + ",") ""
+        let url = tubefeed.Replace("<lines>", linesString.Trim(",".ToCharArray()))
+        let request = HttpWebRequest.Create(url)
+        use response = request.GetResponse()
+        use responseStream = response.GetResponseStream()
+        use reader = new StreamReader(responseStream)
         let status = reader.ReadToEnd()
+        status
+        
 
+    let ParseStatus(status) = 
         let doc = new XmlDocument()
         doc.LoadXml(status)
 
@@ -43,10 +46,11 @@ type Legacy_TubeStatus(lines) =
                     yield CreateLineStatus(node)
             ]
         xmlStatuses
+        
  
     member x.Lines() = lines
     member x.Status() = 
         match lines with
         | [] -> []
         | [""] -> []
-        | _ -> GetStatus()
+        | _ -> GetStatus() |> ParseStatus
