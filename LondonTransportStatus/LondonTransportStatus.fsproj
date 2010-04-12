@@ -49,6 +49,7 @@
     <Compile Include="Legacy\BusStatus.fs" />
     <Compile Include="WebRequest.fs" />
     <Compile Include="TubeUpdatesQuery.fs" />
+    <Compile Include="TubeUpdatesConverter.fs" />
     <Compile Include="TubeStatus.fs" />
   </ItemGroup>
   <ItemGroup>
